@@ -1175,6 +1175,45 @@ img.lazy.loaded {
    끝
    ======================================== */
 
+/* 목차 컨테이너 내 h2 상단 여백 초기화 (prose h2 스타일 오버라이드) */
+#toc-container h2 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* ========================================
+   티스토리 에디터 인라인 검은색 텍스트 오버라이드
+   에디터가 삽입하는 color: black / rgb(0,0,0) / #000 계열 →
+   CSS 변수(--color-text)로 치환 (하드코딩 없음)
+   ======================================== */
+
+.article-content [style*="color: rgb(0, 0, 0)"],
+.article-content [style*="color:rgb(0, 0, 0)"],
+.article-content [style*="color: rgb(0,0,0)"],
+.article-content [style*="color:rgb(0,0,0)"],
+.article-content [style*="color: #000000"],
+.article-content [style*="color:#000000"],
+.article-content [style*="color: #000"],
+.article-content [style*="color:#000"],
+.article-content [style*="color: black"],
+.article-content [style*="color:black"],
+pre[data-ke-type="codeblock"] [style*="color: rgb(0, 0, 0)"],
+pre[data-ke-type="codeblock"] [style*="color:rgb(0, 0, 0)"],
+pre[data-ke-type="codeblock"] [style*="color: #000000"],
+pre[data-ke-type="codeblock"] [style*="color:#000000"],
+pre[data-ke-type="codeblock"] [style*="color: black"],
+pre[data-ke-type="codeblock"] [style*="color:black"] {
+  color: var(--color-text) !important;
+}
+
+/* pre / 코드 블록 기본 텍스트 색상 (인라인 스타일 없는 경우 대비) */
+pre,
+pre[data-ke-type="codeblock"] {
+  color: var(--color-text) !important;
+  background: #1e1e1e !important;
+  border: 1px solid #3e3e42 !important;
+}
+
 /* 티스토리 자동 생성 요소 숨기기 */
 .tt_vox_namecard,
 .tt_box_namecard {

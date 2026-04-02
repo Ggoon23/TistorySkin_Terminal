@@ -420,21 +420,9 @@
 
                 </header>
 
-                <!-- 글 본문 -->
-                <div class="article-content text-gray-300 leading-relaxed">
-                  [##_article_rep_desc_##]
-                </div>
-
-                <!-- 태그 -->
-                <s_tag_label>
-                  <div class="flex flex-wrap gap-2 mt-4">
-                    [##_tag_label_rep_##]
-                  </div>
-                </s_tag_label>
-
                 <!-- 목차 자동 생성 (enableTOC 설정 시 JS로 채워짐) -->
                 <s_if_var_enableTOC>
-                  <div id="toc-container" class="my-8 p-4 bg-[#2d2d30] border border-gray-700 rounded-lg"
+                  <div id="toc-container" class="mb-8 p-4 bg-[#2d2d30] border border-gray-700 rounded-lg"
                     style="display:none">
                     <h2 class="text-sm font-semibold text-gray-400 uppercase mb-3 flex items-center gap-2">
                       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -447,6 +435,18 @@
                     <nav id="toc-nav" class="text-sm space-y-1"></nav>
                   </div>
                 </s_if_var_enableTOC>
+
+                <!-- 글 본문 -->
+                <div class="article-content text-gray-300 leading-relaxed">
+                  [##_article_rep_desc_##]
+                </div>
+
+                <!-- 태그 -->
+                <s_tag_label>
+                  <div class="flex flex-wrap gap-2 mt-4">
+                    [##_tag_label_rep_##]
+                  </div>
+                </s_tag_label>
 
               </article>
 
